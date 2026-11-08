@@ -6,9 +6,7 @@
   var ICONS=['M4 5h16v11H9l-5 4z','M12 3l9 9-9 9-9-9z','M7 12a5 5 0 1 1 10 0a5 5 0 0 1-10 0zM12 17v4','M3 5h18v14H3zM3 9h18','M5 4h14v16H5zM8 9h8M8 13h8','M3 7h4l2-3h6l2 3h4v13H3zM12 17a4 4 0 1 0 0-8a4 4 0 0 0 0 8z','M4 13v-2l12-6v14zM19 9v6','M4 6h16v14H4zM4 10h16M8 3v4M16 3v4','M12 3l2.5 6 6.5.5-5 4.3 1.6 6.4-5.6-3.5-5.6 3.5L8 13.8 3 9.5 9.5 9z','M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V15h8v-1.5A6 6 0 0 0 12 3z'];
   /* Add projects here: { cat: 'branding' | 'digital' | 'content' | 'events', title: 'Name', text: 'Short note' }.
      Without a title, the placeholder text is shown. */
-  var PROJECTS=[{cat:'branding', img:'assets/images/projects/brand-one.jpg',
-   title:{en:'keytoz', ar:'كيتوز'},
-   text:{en:'Brand identity', ar:'هوية بصرية'}},{cat:'branding'},{cat:'digital'},{cat:'content'},{cat:'events'},{cat:'branding'},{cat:'digital'}];
+  var PROJECTS=[{cat:'branding'},{cat:'digital'},{cat:'content'},{cat:'events'},{cat:'branding'},{cat:'digital'}];
   var KEY='<svg class="mk" viewBox="0 0 60 132" aria-hidden="true"><use href="#keyp" fill="url(#kg)"/></svg>';
   var lang='en',filter='all';
   try{lang=localStorage.getItem('kz-lang')==='ar'?'ar':'en'}catch(e){}
@@ -20,9 +18,8 @@
     $('#whys').innerHTML=L.why.map(function(s){return '<li class="rv"><h3>'+s[0]+'</h3><p>'+s[1]+'</p></li>'}).join('');
     $('#teamL').innerHTML=[0,1,2,3].map(function(){return '<li class="rv"><div class="ph">'+KEY+'</div><h3>'+L.tn+'</h3><p>'+L.tr+'</p></li>'}).join('').replace(/class="mk"/g,'');
     $('#filters').innerHTML=Object.keys(L.cats).map(function(k){return '<button class="fb" type="button" data-f="'+k+'" aria-pressed="'+(k===filter)+'">'+L.cats[k]+'</button>'}).join('');
-    function pick(v,d){return v?(typeof v==='object'?v[lang]:v):d}
-    $('#works').innerHTML=PROJECTS.map(function(p){var t=pick(p.title,L.wt);return '<article class="wk rv'+(p.img?' has-img':'')+'" data-c="'+p.cat+'"'+(filter!=='all'&&p.cat!==filter?' hidden':'')+'>'+(p.img?'<img src="'+p.img+'" alt="'+t+'" loading="lazy">':'')+KEY+'<div><small>'+L.cats[p.cat]+'</small><h3>'+t+'</h3><small>'+pick(p.text,L.soon)+'</small></div></article>'}).join('');
-    
+    $('#works').innerHTML=PROJECTS.map(function(p){return '<article class="wk rv" data-c="'+p.cat+'"'+(filter!=='all'&&p.cat!==filter?' hidden':'')+'>'+KEY+'<div><small>'+L.cats[p.cat]+'</small><h3>'+(p.title||L.wt)+'</h3><small>'+(p.text||L.soon)+'</small></div></article>'}).join('');
+    KZ.observe();
   }
   function apply(l){
     lang=l;var L=I18N[l],h=document.documentElement;
