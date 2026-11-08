@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>KEYTOZ Creative | The Key to Greater Experiences</title>
+<meta name="description" content="KEYTOZ is a full-service creative agency: branding, websites, social media, content, campaigns and events.">
+<meta name="theme-color" content="#050505">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KEYTOZ Creative | The Key to Greater Experiences">
+<meta property="og:description" content="A full-service creative agency unlocking brands through ideas and experiences.">
+<meta property="og:image" content="assets/images/og-keytoz.jpg">
+<link rel="icon" href="assets/logo/keytoz-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="kg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00CFFF"/><stop offset=".35" stop-color="#245BFF"/><stop offset=".65" stop-color="#773BFF"/><stop offset=".9" stop-color="#E900C8"/><stop offset="1" stop-color="#FF8A6B"/></linearGradient>
+<path id="keyp" pathLength="1" d="M30 2a28 28 0 1 1 0 56a28 28 0 1 1 0-56Z M30 15a8 8 0 1 0 0 16a8 8 0 1 0 0-16Z M27 29L24.5 47H35.5L33 29Z M24 56h12v74h-12Z M36 100h10v8h-10Z M36 116h8v8h-8Z"/>
+</defs></svg>
+<div id="prog" aria-hidden="true"></div>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="KEYTOZ Creative"><span class="lw">KEYT<svg class="lk" viewBox="0 0 60 132" aria-hidden="true"><use href="#keyp" fill="url(#kg)"/></svg>Z</span><span class="ls">CREATIVE</span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about" data-i18n="n_about">About</a><a href="#services" data-i18n="n_services">Services</a><a href="#process" data-i18n="n_process">Approach</a><a href="#work" data-i18n="n_work">Work</a><a href="#why" data-i18n="n_why">Why KEYTOZ</a><a href="#team" data-i18n="n_team">Team</a><a href="#contact" data-i18n="n_contact">Contact</a>
+    </nav>
+    <div class="hdr-act">
+      <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-art" id="art" aria-hidden="true"><div class="glow"></div><svg viewBox="0 0 60 132"><use href="#keyp" class="kd"/><use href="#keyp" class="kf"/></svg></div>
+    <div class="hero-tx">
+      <p class="slogan gt" data-i18n="slogan">The Key to Greater Experiences.</p>
+      <h1 data-i18n="h1">More Than Creativity A Greater Experience</h1>
+      <p class="lead" data-i18n="intro"></p>
+      <div class="cta"><a class="btn pri" href="#contact" data-i18n="cta1">Start a project</a><a class="btn sec" href="#work" data-i18n="cta2">Explore our work</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="about"><div class="wrap two">
+  <div><h2 class="rv" data-i18n="a_h">About</h2></div>
+  <div>
+    <p class="rv big" data-i18n="a_p1"></p><p class="rv mut" data-i18n="a_p2"></p>
+    <ul class="vals" id="vals"></ul>
+  </div>
+</div></section>
+
+<section id="services" class="alt"><div class="wrap">
+  <h2 class="rv" data-i18n="s_h">Services</h2><p class="rv mut sub" data-i18n="s_p"></p>
+  <ul class="svcs" id="svcs"></ul>
+</div></section>
+
+<section id="process"><div class="wrap two">
+  <div class="sticky"><h2 class="rv" data-i18n="p_h">Approach</h2><p class="rv mut" data-i18n="p_p"></p></div>
+  <ol class="tl" id="tl"></ol>
+</div></section>
+
+<section id="work" class="alt"><div class="wrap">
+  <h2 class="rv" data-i18n="w_h">Work</h2><p class="rv mut sub" data-i18n="w_p"></p>
+  <div class="filters" id="filters" role="group" aria-label="Filter"></div>
+  <div class="works" id="works"></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <h2 class="rv" data-i18n="y_h">Why KEYTOZ</h2>
+  <ul class="whys" id="whys"></ul>
+</div></section>
+
+<section id="team" class="alt"><div class="wrap">
+  <h2 class="rv" data-i18n="t_h">Team</h2>
+  <ul class="team" id="teamL"></ul>
+</div></section>
+
+<section class="final"><div class="ring r2" aria-hidden="true"></div><div class="wrap">
+  <p class="slogan gt rv" data-i18n="slogan"></p>
+  <h2 class="rv" data-i18n="f_h"></h2><p class="rv mut" data-i18n="f_p"></p>
+  <a class="btn pri rv" href="#contact" data-i18n="cta1">Start a project</a>
+</div></section>
+
+<section id="contact"><div class="wrap two">
+  <div>
+    <h2 class="rv" data-i18n="c_h">Contact</h2><p class="rv mut" data-i18n="c_p"></p>
+    <!-- EDIT: replace the placeholder contact details below -->
+    <ul class="info rv">
+      <li><span data-i18n="c_email">Email</span><a href="mailto:keytozcreative@gmail.com" dir="ltr">keytozcreative@gmail.com</a></li>
+      <li><span>WhatsApp</span><a href="https://wa.me/" target="_blank" rel="noopener" dir="ltr">+000 000 000 000</a></li>
+      <li><span>Instagram</span><a href="https://www.instagram.com/keytoz_creative?rpxt=bHh6ZTlja3JobHUx&utm_source=qr" target="_blank" rel="noopener" dir="ltr">@keytoz_creative</a></li>
+      <li><span>Facebook</span><a href="https://www.facebook.com/share/1FSFtuwXMK/?mibextid=wwXIfr" target="_blank" rel="noopener" dir="ltr">Keytoz Creative Studio</a></li>
+      <li><span>Tiktok </span><a href="www.tiktok.com/@keytoz.creative" target="_blank" rel="noopener" dir="ltr">keytoz.creative</a></li>
+    
+    </ul>
+  </div>
+  <form id="form" class="form rv" novalidate>
+    <div class="fld"><label for="f-name" data-i18n="l_name">Name</label><input id="f-name" name="name" autocomplete="name" required><small class="err" id="e-name" role="alert"></small></div>
+    <div class="fld"><label for="f-email" data-i18n="l_email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" dir="ltr" required><small class="err" id="e-email" role="alert"></small></div>
+    <div class="fld"><label for="f-phone"><span data-i18n="l_phone">Phone</span> <em data-i18n="opt">(optional)</em></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"><small class="err" id="e-phone" role="alert"></small></div>
+    <div class="fld"><label for="f-msg" data-i18n="l_msg">Message</label><textarea id="f-msg" name="message" rows="5" required></textarea><small class="err" id="e-msg" role="alert"></small></div>
+    <button class="btn pri" type="submit" data-i18n="l_send">Send message</button>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+
+<footer class="ftr"><div class="wrap">
+  <div class="ft-top">
+    <div><a class="logo" href="#top" aria-label="KEYTOZ Creative"><span class="lw">KEYT<svg class="lk" viewBox="0 0 60 132" aria-hidden="true"><use href="#keyp" fill="url(#kg)"/></svg>Z</span><span class="ls">CREATIVE</span></a><p class="mut" data-i18n="ft_p"></p></div>
+    <nav aria-label="Footer"><h3 data-i18n="ft_explore">Explore</h3><a href="#about" data-i18n="n_about"></a><a href="#process" data-i18n="n_process"></a><a href="#work" data-i18n="n_work"></a><a href="#contact" data-i18n="n_contact"></a></nav>
+    <nav aria-label="Footer services"><h3 data-i18n="n_services">Services</h3><a href="#services" data-i18n="fs1"></a><a href="#services" data-i18n="fs2"></a><a href="#services" data-i18n="fs3"></a><a href="#services" data-i18n="fs4"></a></nav>
+    <nav aria-label="Social"><h3 data-i18n="ft_follow">Follow</h3><a href="https://www.facebook.com/share/1FSFtuwXMK/?mibextid=wwXIfr" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.facebook.com/share/1FSFtuwXMK/?mibextid=wwXIfr" target="_blank" rel="noopener">Fasebook</a></a><a href="www.tiktok.com/@keytoz.creative" target="_blank" rel="noopener">Tiktok</a></nav>
+  </div>
+  <p class="copy"><span data-i18n="copy"></span> <span class="gt" data-i18n="slogan"></span></p>
+</div></footer>
+
+<script src="js/translations.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

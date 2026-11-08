@@ -1,0 +1,24 @@
+/* Mobile-first base lives in style.css; these layers expand for larger screens. */
+@media (min-width:600px){
+ .works{grid-template-columns:1fr 1fr}.whys{grid-template-columns:1fr 1fr;gap:40px 32px}
+ .team{grid-template-columns:repeat(4,1fr)}.ft-top{grid-template-columns:1.6fr 1fr 1fr 1fr}.ft-top>div{grid-column:auto}
+ .cta .btn{flex:0 0 auto}
+}
+@media (min-width:900px){
+ :root{--hh:78px}
+ .burger{display:none}
+ .nav{position:static;inset:auto;background:none;flex-direction:row;gap:1.6rem;padding:0;transform:none;visibility:visible;overflow:visible;transition:none}
+ .nav a,.nav:not(.open) a{font:500 .9rem var(--ff);color:var(--g);transform:none;padding:0}
+ .nav a:hover{color:#fff}
+ .lw{font-size:1.35rem}.ls{font-size:.48rem}
+ .hero-in{grid-template-columns:1.25fr 1fr;align-items:center;gap:48px}
+ .hero-art{order:2;width:min(24vw,250px);justify-self:center}
+ .ring{width:900px;inset-inline-end:-12%}[dir=rtl] .ring{inset-inline-start:-12%}
+ .two{grid-template-columns:1fr 1.5fr;gap:80px}
+ .sticky{position:sticky;top:120px;align-self:start}
+ .svcs{display:grid;grid-template-columns:1fr 1fr;column-gap:72px}
+ .works{grid-template-columns:repeat(3,1fr)}
+ .vals{gap:0 32px}
+}
+@media (hover:none){.svc:hover{padding-inline-start:0}}
+@media (max-width:359px){.lw{font-size:1rem}.vals{grid-template-columns:1fr}}

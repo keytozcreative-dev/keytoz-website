@@ -1,0 +1,26 @@
+/* One orchestrated moment: the key draws, fills, then "unlocks" with a glow. */
+.kd{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.5s .2s cubic-bezier(.6,0,.2,1) forwards}
+.kf{opacity:0;animation:fade .8s 1.3s ease forwards}
+.glow{opacity:0;transform:translate(-50%,-50%) scale(.2);animation:unlock 2s 1.5s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-tx>*{opacity:0;transform:translateY(16px);animation:up .8s ease forwards}
+.hero-tx>:nth-child(1){animation-delay:1.2s}.hero-tx>:nth-child(2){animation-delay:1.35s}.hero-tx>:nth-child(3){animation-delay:1.5s}.hero-tx>:nth-child(4){animation-delay:1.65s}
+.ring{animation:spin 80s linear infinite}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes unlock{to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes spin{to{rotate:360deg}}
+.ring{rotate:0deg}
+.r2{animation:none}
+/* scroll reveals (only when JS is running) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.nav a{transition:opacity .2s,transform .5s}
+.nav:not(.open) a{transform:translateY(20px)}
+.nav.open a{transform:none}
+.nav.open a:nth-child(2){transition-delay:.05s}.nav.open a:nth-child(3){transition-delay:.1s}.nav.open a:nth-child(4){transition-delay:.15s}.nav.open a:nth-child(5){transition-delay:.2s}.nav.open a:nth-child(6){transition-delay:.25s}.nav.open a:nth-child(7){transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .kd{stroke-dashoffset:0}.kf,.glow,.hero-tx>*{opacity:1;transform:none}.glow{transform:translate(-50%,-50%)}
+ .js .rv{opacity:1;transform:none}
+}
